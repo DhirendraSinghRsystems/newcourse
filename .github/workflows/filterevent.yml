@@ -1,0 +1,27 @@
+name: filter event typs
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+  push:
+    branches:
+      - main # work on push over main branch
+      - dev-* # work on push over dev-[dev-newop,dev-operation]
+      - features/** #work on push over [features/devbranch,features/newdev/operation]
+jobs:
+  job1executed:
+    runs-on: ubutu-latest
+    steps:
+      - name: step 1 is greeting to wprld
+        run: echo "hello world"
+      - name: step 1 task two
+        run: echo "beautiful world"
+  job2executed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step2 is being exuted
+        run: echo "job two is succesful"
+      
+      
+      
