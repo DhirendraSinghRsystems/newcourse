@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: multi line command
-        run: echo "ok"
+        run: |
+         echo "ok"
+         echo "second line"
