@@ -1,5 +1,5 @@
 name: workflow2
-on: workflow_dispatch
+on: [workflow_dispatch,push,issues]
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -14,4 +14,9 @@ jobs:
         run: |
          echo "ok"
          echo "second line"
-         echo "${{github.events}}"
+         echo "${{github.event}}"
+  third-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: third job running
+        run: echo "third job success"
