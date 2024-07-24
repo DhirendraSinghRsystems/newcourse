@@ -1,0 +1,26 @@
+name: workflow2
+# on: [workflow_dispatch,push,issues]
+on:
+  pull_request:
+    types: [open,edited]
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display first message
+        run: echo "first steps"
+  second-job:
+    runs-on: ubuntu-latest
+    needs: first-job
+    steps:
+      - name: multi line command
+        run: |
+         echo "ok"
+         echo "second line"
+         echo "${{ toJSON(github.event) }}"
+  third-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: third job running
+        run: echo "third job success"
+        
