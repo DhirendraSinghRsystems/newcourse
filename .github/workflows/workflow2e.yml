@@ -10,7 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: multi line command
-      - run: |
-              echo "first line"
-              echo "second line"
-              echi "${{github.events}}"
+      - run: echo "${{github.events}}"
