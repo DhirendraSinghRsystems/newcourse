@@ -2,12 +2,12 @@ name: workflow 2
 on: workflow_dispatch
 jobs:
   firststep:
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-latest
     steps:
       - name: display first message
       - run: echo "first steps"
   second-job:
-    runs-on: "ubunti-latest"
+    runs-on: ubuntu-latest
     steps:
       - name: multi line command
       - run: |
