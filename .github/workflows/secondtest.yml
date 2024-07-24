@@ -14,9 +14,10 @@ jobs:
         run: |
          echo "ok"
          echo "second line"
-         echo "${{github.event}}"
+         echo "${{ toJSON(github.event) }}"
   third-job:
     runs-on: ubuntu-latest
     steps:
       - name: third job running
         run: echo "third job success"
+        
