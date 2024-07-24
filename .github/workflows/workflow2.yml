@@ -1,7 +1,7 @@
 name: workflow 2
 on: workflow_dispatch
 jobs:
-  firststep:
+  first-job:
     runs-on: ubuntu-latest
     steps:
       - name: display first message
@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: multi line command
-      - run: echo "${{github.events}}"
+      - run: echo "ok"
