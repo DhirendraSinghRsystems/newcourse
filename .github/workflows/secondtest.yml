@@ -5,4 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: display first message
-      - run: echo "first steps"
+        run: echo "first steps"
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: multi line command
+        run: echo "ok"
