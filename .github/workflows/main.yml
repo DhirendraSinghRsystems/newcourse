@@ -1,0 +1,10 @@
+name: new issue test
+on:
+  issues
+jobs:
+  job1:
+   runs-on: ubuntu-latest
+   steps:
+     - name: first step
+       run: echo "hello dev new test"
+  
